@@ -29,14 +29,16 @@ public class Main {
                 win=true;
             }
             else if (guess<correctNumber) {
-                turns++;
+                i++;
                 System.out.println("Your guess is lower than the number");
+                return;
             }
             else if (guess>correctNumber) {
-                turns++;
+                i++;
                 System.out.println("Your guess is higher than the number");
+                return;
             }
-            System.out.println("Good job, " + name + "! You guessed my number in " + turns + "guesses!");
+            System.out.println("Good job, " + name + "! You guessed my number in " + turns + " guess/es!");
         }
 //        do {
 //            int theNumber = (int) (Math.random() * 100 + 1);
