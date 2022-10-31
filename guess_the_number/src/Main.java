@@ -12,14 +12,13 @@ public class Main {
         System.out.println("Well, " + name + ", I am thinking of a number between 1 and 20.");
 
         Random theNumber = new Random();
-        int correctNumber = theNumber.nextInt(100);
+        int correctNumber = theNumber.nextInt(20);
         int turns = 0;
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Take a guess.");
 
         int guess;
-        int i = 0;
         boolean win =false;
         while (win==false) {
             guess = scan.nextInt();
@@ -29,14 +28,10 @@ public class Main {
                 win=true;
             }
             else if (guess<correctNumber) {
-                i++;
                 System.out.println("Your guess is lower than the number");
-                return;
             }
             else if (guess>correctNumber) {
-                i++;
                 System.out.println("Your guess is higher than the number");
-                return;
             }
             System.out.println("Good job, " + name + "! You guessed my number in " + turns + " guess/es!");
         }
