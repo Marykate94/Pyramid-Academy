@@ -20,14 +20,18 @@ public class Main {
 
         int guess;
         boolean win =false;
-        while (win==false) {
+//        String playAgain = "";
+//        boolen play = true;
+
+        while (win == false) {
             guess = scan.nextInt();
             turns++;
 
-            if(guess == correctNumber) {
-                win=true;
+            if (guess == correctNumber) {
+                win = true;
                 System.out.println("Good job, " + name + "! You guessed my number in " + turns + " guess/es!");
                 System.out.println("Would you like to play again? (y/n)");
+//                playAgain = scan.next();
             }
             else if (guess<correctNumber) {
                 System.out.println("Your guess is lower than the number");
