@@ -26,14 +26,18 @@ public class Main {
 
             if(guess == correctNumber) {
                 win=true;
+                System.out.println("Good job, " + name + "! You guessed my number in " + turns + " guess/es!");
+                System.out.println("Would you like to play again? (y/n)");
             }
             else if (guess<correctNumber) {
                 System.out.println("Your guess is lower than the number");
+                win=false;
             }
             else if (guess>correctNumber) {
                 System.out.println("Your guess is higher than the number");
+                win=false;
             }
-            System.out.println("Good job, " + name + "! You guessed my number in " + turns + " guess/es!");
+
         }
 //        do {
 //            int theNumber = (int) (Math.random() * 100 + 1);
